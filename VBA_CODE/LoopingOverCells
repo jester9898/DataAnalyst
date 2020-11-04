@@ -1,0 +1,22 @@
+Sub clearNum()
+    Dim x As Integer
+    Dim numRows As Integer
+    Dim newString As String
+    
+    
+    numRows = Range("C2", Range("C2").End(xlDown)).Rows.Count
+    ' gets the number of rows there are
+    
+    ' wb.Sheets(1).Range("A1").End(xlDown).Value
+    ' gets the value of the last row
+
+    ' wb.Sheets(1).Range("A1").End(xlDown).Row
+    ' Also gets the number of rows there are
+
+    For x = 1 To numRows + 1
+        'code
+        newString = Replace(ActiveSheet.Cells(x, 3).Value, "$", "")
+        newString = Replace(ActiveSheet.Cells(x, 3).Value, "*", "")
+        ActiveSheet.Cells(x, 3).Value = newString
+    Next
+End Sub

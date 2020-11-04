@@ -1,0 +1,9 @@
+Dim path_to_project As String
+    path_to_project = ThisWorkbook.Path
+    Dim wb As Workbook
+    Set wb = Workbooks.Open(path_to_project & "\Data\Customer_Info.xlsx")
+    
+    'ThisWorkbook.Path -> will get the current path of this workbook.
+    'To open another workbook, use the current path as relative reference.
+
+End Sub

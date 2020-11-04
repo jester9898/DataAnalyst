@@ -1,0 +1,14 @@
+    Dim index As Integer
+    For index = 0 To num_of_record - 1
+        ReDim Preserve crList(0 To index) As CustomerRecord
+        crList(index).name = wb.Sheets(1).Range("A1").Offset(index + 1, 0)
+        crList(index).age = wb.Sheets(1).Range("A1").Offset(index + 1, 1)
+        crList(index).score = wb.Sheets(1).Range("A1").Offset(index + 1, 2)
+        
+    Next
+
+
+    dimension must first be empty. i.e. dim x(0 to 3)
+    redim will get rid of previous value. 
+    hence we need to use Preserve
+    
