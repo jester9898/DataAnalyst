@@ -13,3 +13,6 @@ dataset_test = dataset[["Pclass", "Sex", "SibSp", "Parch"]]
 dataset_train_arr = dataset_train.to_numpy()
 dataset_test_arr = dataset_test.to_numpy()
 X_train, X_test, Y_train, Y_test = train_test_split(dataset_train_arr, dataset_test_arr, test_size=0.33, random_state=30)
+
+
+print("this is a test text")
